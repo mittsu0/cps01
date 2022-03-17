@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -name '*.sh' | awk -F'[/]' '{print $NF}' | awk -F'[.]' '{print $1}'
+find . -type f -name '*.sh' | awk -F'[/]' '{print $NF}' | sed 's/.sh$//g'
